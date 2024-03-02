@@ -36184,11 +36184,11 @@
     return new Expr(new Marker(1), [t]);
   };
   var wrapBoundary = function(dictIsExprLabel) {
-    var isId3 = isId(isExprLabelMeta(isExprLabelSortLabel(dictIsExprLabel)));
+    var isId2 = isId(isExprLabelMeta(isExprLabelSortLabel(dictIsExprLabel)));
     return function(dir2) {
       return function(ch) {
         return function(t) {
-          var $479 = isId3(ch);
+          var $479 = isId2(ch);
           if ($479) {
             return t;
           }
@@ -42777,7 +42777,6 @@
   var isExprLabelSortLabel2 = /* @__PURE__ */ isExprLabelSortLabel(isExprLabelPreSortLabel);
   var isExprLabelMeta2 = /* @__PURE__ */ isExprLabelMeta(isExprLabelSortLabel2);
   var matchChange2 = /* @__PURE__ */ matchChange(isExprLabelMeta2);
-  var isId2 = /* @__PURE__ */ isId(isExprLabelMeta2);
   var wrapBoundary2 = /* @__PURE__ */ wrapBoundary(isExprLabelPreSortLabel);
   var rEndpoint2 = /* @__PURE__ */ rEndpoint(isExprLabelMeta2);
   var eliminateReplaces2 = /* @__PURE__ */ eliminateReplaces(isExprLabelMeta2);
@@ -43418,43 +43417,6 @@
     }
   };
   var makeTotalMap2 = /* @__PURE__ */ makeTotalMap(enumRuleLabel)(boundedRuleLabel);
-  var upWrapLambdaUp = function(v) {
-    return function(v1) {
-      var v2 = function(v3) {
-        return Nothing.value;
-      };
-      if (v1.value0 instanceof SSInj && (v1.value0.value0 instanceof DerivLabel && (v1.value0.value0.value0 instanceof Lam && (v1.value1.length === 3 && (v1["value1"][0].value0 instanceof SSInj && (v1["value1"][0].value0.value0 instanceof DerivLiteral && (v1["value1"][0].value0.value0.value0 instanceof DataString && (v1["value1"][2].value0 instanceof Boundary && (v1["value1"][2].value0.value0 instanceof Up && v1["value1"][2].value1.length === 1))))))))) {
-        var $1898 = matchChange2(v1["value1"][2].value0.value1)(injectChangeMatchExpr(TermSort.value)([injectChangeMatchExpr(CtxConsSort.value)([cSlot, cSlot, cSlot]), dPLUS(Arrow.value)([slot2])(cSlot)([])]));
-        if ($1898 instanceof Just && ($1898.value0.value0.length === 1 && $1898.value0.value1.length === 4)) {
-          var $1899 = eq42($1898["value0"]["value1"][1])(inject($1898["value0"]["value0"][0]));
-          if ($1899) {
-            var $1900 = isId2($1898["value0"]["value1"][0]);
-            if ($1900) {
-              var $1901 = v1["value1"][0].value0.value0.value0.value0 === "";
-              if ($1901) {
-                return pure34(function() {
-                  var v3 = trace4("NOTE: this rule is untested, because I couldn't find a case where it was used.")(function(v4) {
-                    return unit;
-                  });
-                  return wrapBoundary2(Up.value)(new Expr(csor(TermSort.value), [$1898["value0"]["value1"][2], new Expr(csor(Arrow.value), [inject($1898["value0"]["value0"][0]), $1898["value0"]["value1"][3]])]))(wrapBoundary2(Down.value)(new Expr(csor(TermSort.value), [minusChange(sor(CtxConsSort.value))([rEndpoint2($1898["value0"]["value1"][0]), $1898["value0"]["value0"][0]])(inject(rEndpoint2($1898["value0"]["value1"][2])))([]), new Expr(csor(Arrow.value), [inject($1898["value0"]["value0"][0]), inject(rEndpoint2($1898["value0"]["value1"][3]))])]))(v1["value1"][2]["value1"][0]));
-                }());
-              }
-              ;
-              return v2(true);
-            }
-            ;
-            return v2(true);
-          }
-          ;
-          return v2(true);
-        }
-        ;
-        return v2(true);
-      }
-      ;
-      return v2(true);
-    };
-  };
   var unWrapLambda = function(v) {
     return function(v1) {
       if (v1.value0 instanceof Boundary && (v1.value0.value0 instanceof Down && (v1.value1.length === 1 && (v1["value1"][0].value0 instanceof SSInj && (v1["value1"][0].value0.value0 instanceof DerivLabel && (v1["value1"][0].value0.value0.value0 instanceof Lam && v1["value1"][0].value1.length === 3)))))) {
@@ -44534,7 +44496,7 @@
           return mapMaybe2(identity23)([makeSubEditFromTerm2(dterm)(show16(v3.value0))(v)]);
         }
         ;
-        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1544, column 9 - line 1549, column 103): " + [v3.constructor.name]);
+        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1545, column 9 - line 1550, column 103): " + [v3.constructor.name]);
       }
       ;
       return v2(true);
@@ -44610,15 +44572,15 @@
                   return pure34(dTERM2(Suc.value)([new Tuple("gamma", rEndpoint2(v1[0])), new Tuple("x", rEndpoint2(v1[1])), new Tuple("typeX", rEndpoint2(v1[2])), new Tuple("y", v[0]), new Tuple("typeY", v[1]), new Tuple("locality", rEndpoint2(v1[3]))])([wrapBoundary2(Down.value)(new Expr(csor(VarSort.value), [v1[0], v1[1], v1[2], v1[3]]))(v2[0])]));
                 }
                 ;
-                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 976, column 6 - line 982, column 18): " + [v2.constructor.name]);
+                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 977, column 6 - line 983, column 18): " + [v2.constructor.name]);
               };
             }
             ;
-            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 976, column 6 - line 982, column 18): " + [v1.constructor.name]);
+            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 977, column 6 - line 983, column 18): " + [v1.constructor.name]);
           };
         }
         ;
-        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 976, column 6 - line 982, column 18): " + [v.constructor.name]);
+        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 977, column 6 - line 983, column 18): " + [v.constructor.name]);
       };
     });
   }();
@@ -44800,15 +44762,15 @@
                   return pure34(wrapBoundary2(Up.value)(new Expr(csor(VarSort.value), [new Expr(csor(CtxConsSort.value), [v1[1], inject(v[1]), inject(rEndpoint2(v1[0]))]), v1[1], diff2(rEndpoint2(v1[2]))(v[1]), replaceChange(new Expr(sor(NonLocal.value), []))(new Expr(sor(Local.value), []))]))(dTERM2(Zero.value)([new Tuple("gamma", rEndpoint2(v1[0])), new Tuple("x", v[0]), new Tuple("type", v[1])])([])));
                 }
                 ;
-                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1016, column 6 - line 1023, column 79): " + [v2.constructor.name]);
+                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1017, column 6 - line 1024, column 79): " + [v2.constructor.name]);
               };
             }
             ;
-            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1016, column 6 - line 1023, column 79): " + [v1.constructor.name]);
+            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1017, column 6 - line 1024, column 79): " + [v1.constructor.name]);
           };
         }
         ;
-        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1016, column 6 - line 1023, column 79): " + [v.constructor.name]);
+        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1017, column 6 - line 1024, column 79): " + [v.constructor.name]);
       };
     });
   }();
@@ -44840,15 +44802,15 @@
                   return pure34(wrapBoundary2(Down.value)(new Expr(csor(VarSort.value), [v1[0], v1[1], v1[2], v1[3]]))(v2[0]));
                 }
                 ;
-                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1006, column 6 - line 1008, column 10): " + [v2.constructor.name]);
+                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1007, column 6 - line 1009, column 10): " + [v2.constructor.name]);
               };
             }
             ;
-            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1006, column 6 - line 1008, column 10): " + [v1.constructor.name]);
+            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1007, column 6 - line 1009, column 10): " + [v1.constructor.name]);
           };
         }
         ;
-        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1006, column 6 - line 1008, column 10): " + [v.constructor.name]);
+        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1007, column 6 - line 1009, column 10): " + [v.constructor.name]);
       };
     });
   }();
@@ -44985,15 +44947,15 @@
                   return pure34(termToSSTerm(sortToType(rEndpoint2(v1[0]))));
                 }
                 ;
-                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1042, column 6 - line 1042, column 78): " + [v2.constructor.name]);
+                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1043, column 6 - line 1043, column 78): " + [v2.constructor.name]);
               };
             }
             ;
-            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1042, column 6 - line 1042, column 78): " + [v1.constructor.name]);
+            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1043, column 6 - line 1043, column 78): " + [v1.constructor.name]);
           };
         }
         ;
-        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1042, column 6 - line 1042, column 78): " + [v.constructor.name]);
+        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1043, column 6 - line 1043, column 78): " + [v.constructor.name]);
       };
     });
   }();
@@ -45020,15 +44982,15 @@
                     };
                   }
                   ;
-                  throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1127, column 20 - line 1132, column 143): " + [v4.constructor.name]);
+                  throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1128, column 20 - line 1133, column 143): " + [v4.constructor.name]);
                 };
               }
               ;
-              throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1127, column 20 - line 1132, column 143): " + [v3.constructor.name]);
+              throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1128, column 20 - line 1133, column 143): " + [v3.constructor.name]);
             });
           }
           ;
-          throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1127, column 6 - line 1132, column 144): " + [v2.constructor.name]);
+          throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1128, column 6 - line 1133, column 144): " + [v2.constructor.name]);
         };
       })(v)(v1);
     };
@@ -45098,15 +45060,15 @@
                   return pure34(wrapBoundary2(Up.value)(new Expr(csor(VarSort.value), [inject(rEndpoint2(v1[0])), v1[1], v1[2], new Expr(new Replace(new Expr(sor(Local.value), []), new Expr(sor(NonLocal.value), [])), [])]))(termToSSTerm(getFreeVar(rEndpoint2(v1[0]))(v[0])(v[1]))));
                 }
                 ;
-                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 994, column 6 - line 997, column 71): " + [v2.constructor.name]);
+                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 995, column 6 - line 998, column 71): " + [v2.constructor.name]);
               };
             }
             ;
-            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 994, column 6 - line 997, column 71): " + [v1.constructor.name]);
+            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 995, column 6 - line 998, column 71): " + [v1.constructor.name]);
           };
         }
         ;
-        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 994, column 6 - line 997, column 71): " + [v.constructor.name]);
+        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 995, column 6 - line 998, column 71): " + [v.constructor.name]);
       };
     });
   }();
@@ -45227,7 +45189,7 @@
         return [];
       }
       ;
-      return append18(mapMaybe2(identity23)([makeEditFromPath2(newPathFromRule2(Lam.value)(2))("lambda")(cursorSort), makeEditFromPath2(newPathFromRule2(Let.value)(3))("let")(cursorSort), makeEditFromPath2(newPathFromRule2(App2.value)(0))("(")(cursorSort)]))(append18(concat2(mapFlipped9(allPossible2)(function(op) {
+      return append18(mapMaybe2(identity23)([makeEditFromPath2(newPathFromRule2(Lam.value)(2))("lambda")(cursorSort), makeEditFromPath2(newPathFromRule2(Let.value)(3))("let")(cursorSort), makeEditFromPath2(newPathFromRule2(Let.value)(2))("let")(cursorSort), makeEditFromPath2(newPathFromRule2(App2.value)(0))("(")(cursorSort)]))(append18(concat2(mapFlipped9(allPossible2)(function(op) {
         return fromFoldable20(makeWrapEdits2(isValidCursorSort)(isValidSelectionSorts)(forgetSorts)(splitChange)(infixName(op))(cursorSort)(newTermFromRule2(new InfixRule(op))));
       })))(append18(fromFoldable20(getVarWraps(cursorSort)))(append18(reverse2(fromFoldable20(getAppliedWrapEdits("cons")(cursorSort)(newTermFromRule2(ConsRule.value)))))(append18(reverse2(fromFoldable20(getAppliedWrapEdits("head")(cursorSort)(newTermFromRule2(HeadRule.value)))))(append18(reverse2(fromFoldable20(getAppliedWrapEdits("tail")(cursorSort)(newTermFromRule2(TailRule.value)))))(append18(reverse2(fromFoldable20(getAppliedWrapEdits("index")(cursorSort)(newTermFromRule2(IndexRule.value)))))(append18(reverse2(fromFoldable20(getAppliedWrapEdits("length")(cursorSort)(newTermFromRule2(LengthRule.value)))))(append18(reverse2(fromFoldable20(getAppliedWrapEdits("append")(cursorSort)(newTermFromRule2(AppendRule.value)))))(append18(fromFoldable20(getAppliedWrapEdits("match")(cursorSort)(newTermFromRule2(ListMatchRule.value))))(append18(catMaybes([makeEditFromPath2(newPathFromRule2(If.value)(1))("if")(cursorSort)]))(append18(fromFoldable20(makeWrapEdits2(isValidCursorSort)(isValidSelectionSorts)(forgetSorts)(splitChange)("==")(cursorSort)(newTermFromRule2(EqualsRule.value))))(concat2(mapFlipped9(allPossible1)(function(constant) {
         return fromFoldable20(getAppliedWrapEdits(constantName(constant))(cursorSort)(newTermFromRule2(new ConstantRule(constant))));
@@ -45246,21 +45208,21 @@
                   return pure34(dTERM2(Lam.value)([new Tuple("x", varName), new Tuple("a", v[0]), new Tuple("b", rEndpoint2(v1[1])), new Tuple("gamma", rEndpoint2(v1[0]))])([termToSSTerm(fromJust$prime("wrapLambda")(defaultDerivTerm2(pureMetaExpr(new TypeOfLabel(SortString.value))([varName])))), termToSSTerm(sortToType(v[0])), wrapBoundary2(Down.value)(new Expr(csor(TermSort.value), [plusChange(sor(CtxConsSort.value))([varName, v[0]])(v1[0])([]), v1[1]]))(v2[0])]));
                 }
                 ;
-                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1054, column 6 - line 1062, column 18): " + [v2.constructor.name]);
+                throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1055, column 6 - line 1063, column 18): " + [v2.constructor.name]);
               };
             }
             ;
-            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1054, column 6 - line 1062, column 18): " + [v1.constructor.name]);
+            throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1055, column 6 - line 1063, column 18): " + [v1.constructor.name]);
           };
         }
         ;
-        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1054, column 6 - line 1062, column 18): " + [v.constructor.name]);
+        throw new Error("Failed pattern match at Language.Pantograph.Specific.Currying (line 1055, column 6 - line 1063, column 18): " + [v.constructor.name]);
       };
     });
   }();
   var stepRules = /* @__PURE__ */ function() {
     var chLang = langToChLang(isRuleLabelPreSortLabelRu)(language3);
-    return fromFoldable(foldableArray)(append18([mergeErrorsDown, mergeErrorsUp, localBecomesNonlocal, nonlocalBecomesLocal, insertSucRule, removeSucRule, passThroughArrow, typeBecomeRhsOfChange, unWrapAppDown, wrapLambda, upWrapLambdaUp, introDownErrorNeutral, introUpErrorNeutral, removeError, unWrapLambda, mergeAppGreyApp, mergeAppGreyApp2, wrapApp, makeAppGreyed, removeGreyedApp])(append18([defaultDown(isExprLabelPreSortLabel)(isRuleLabelPreSortLabelRu)(chLang), defaultUp(isExprLabelPreSortLabel)(isRuleLabelPreSortLabelRu)(chLang)])([fallbackDownError, fallbackUpError])));
+    return fromFoldable(foldableArray)(append18([mergeErrorsDown, mergeErrorsUp, localBecomesNonlocal, nonlocalBecomesLocal, insertSucRule, removeSucRule, passThroughArrow, typeBecomeRhsOfChange, unWrapAppDown, wrapLambda, introDownErrorNeutral, introUpErrorNeutral, removeError, unWrapLambda, mergeAppGreyApp, mergeAppGreyApp2, wrapApp, makeAppGreyed, removeGreyedApp])(append18([defaultDown(isExprLabelPreSortLabel)(isRuleLabelPreSortLabelRu)(chLang), defaultUp(isExprLabelPreSortLabel)(isRuleLabelPreSortLabelRu)(chLang)])([fallbackDownError, fallbackUpError])));
   }();
   var colonElem2 = /* @__PURE__ */ makePuncElem("colon")(":");
   var clipboardSort = function(v) {
